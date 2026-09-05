@@ -1,4 +1,9 @@
 public interface Navigable {
+
+    /**
+     * Represents all vehicles that can move/navigate
+     */
+
     /**
      *
      * @param shipsDestination representing the ships destination

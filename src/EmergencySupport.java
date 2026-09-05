@@ -1,6 +1,10 @@
 public interface EmergencySupport {
 
     /**
+     * Represents any unit capable of providing aid
+     */
+
+    /**
      * no param
      * no return
      */
