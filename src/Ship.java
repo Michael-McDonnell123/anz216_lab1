@@ -16,7 +16,6 @@ public abstract class Ship implements Navigable {
 
     public void dock(String port) {
         this.currentPort = port;
-        this.currentSpeed = 0.0;
     }
 
     public String getName() {

@@ -37,9 +37,9 @@ public class DisasterResponseCoordinator {
 
     @Override
     public String toString() {
-        return "DisasterResponseCoordinator [responders= " +
+        return "DisasterResponseCoordinator [responders=\n" +
                 getResponders() +
-                "]";
+                "\n]";
     }
 
 }

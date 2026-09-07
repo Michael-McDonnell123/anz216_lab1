@@ -7,16 +7,25 @@ public class RescueHelicopter implements EmergencySupport {
     double currentSpeed;
     boolean rescueHoist;
 
-    public RescueHelicopter(String callSign, String baseLocation, int i, boolean b) {
+    public RescueHelicopter(String callSign, String baseLocation, int medicalKit, double altitude, double currentSpeed, boolean rescueHoist) {
         this.callSign = callSign;
         this.baseLocation = baseLocation;
-        this.medicalKit = i;
-        this.rescueHoist = b;
+        this.medicalKit = medicalKit;
+        this.altitude = altitude;
+        this.currentSpeed = currentSpeed;
+        this.rescueHoist = rescueHoist;
+    }
+
+    public RescueHelicopter(String callSign, String baseLocation, int medicalKit, boolean rescueHoist) {
+        this.callSign = callSign;
+        this.baseLocation = baseLocation;
+        this.medicalKit = medicalKit;
+        this.rescueHoist = rescueHoist;
     }
 
     @Override
     public void deployAid() {
-        System.out.println("Deploying Helicopter " + callSign);
+        System.out.println("Rescue helicopter " + getCallSign() + " deploying " + getMedicalKit() + " medical kits");
     }
 
     @Override
@@ -78,13 +87,12 @@ public class RescueHelicopter implements EmergencySupport {
 
     @Override
     public String toString() {
-        return super.toString() +
-                getCallSign() +
-                getBaseLocation() +
-                getMedicalKit() +
-                getAltitude() +
-                getCurrentSpeed() +
-                getRescueHoist();
+        return "\nRescueHelicopter [callSign='" + getCallSign() + '\'' +
+                "', base location='" + getBaseLocation() + '\'' +
+                "', current speed=" + getCurrentSpeed() +
+                ", altitude=" + getAltitude() +
+                ", medical kits=" + getMedicalKit() +
+                ", has rescue hoist=" + getRescueHoist() + " ]";
     }
 
 }

@@ -4,11 +4,11 @@ public class AidShip extends Ship implements EmergencySupport{
     int suppliesOnBoard;
     boolean hasHelipad;
 
-    public AidShip(String name, String registrationNumber, int tonnage, int crewSize, String currentPort, String medical, int i, boolean b) {
+    public AidShip(String name, String registrationNumber, int tonnage, int crewSize, String currentPort, String medical, int suppliesOnBoard, boolean hasHelipad) {
         super(name, registrationNumber, tonnage, crewSize, currentPort);
         this.addType = medical;
-        this.suppliesOnBoard = i;
-        this.hasHelipad = b;
+        this.suppliesOnBoard = suppliesOnBoard;
+        this.hasHelipad = hasHelipad;
     }
 
     @Override
@@ -18,7 +18,6 @@ public class AidShip extends Ship implements EmergencySupport{
     }
 
     public void unloadSupplies(){
-        System.out.println(getName() + " : Unloading supplies");
         this.suppliesOnBoard = 0;
     }
 
@@ -68,9 +67,14 @@ public class AidShip extends Ship implements EmergencySupport{
 
     @Override
     public String toString(){
-        return super.toString() +
-                getAidType() +
-                getSuppliesOnBoard() +
-                getHelipad();
+        return "Ship [name=" + getName() +
+                ", registrationNumber=" + getRegistrationNumber() +
+                ", tonnage=" + getTonnage() +
+                ", crewSize=" + getCrewSize() +
+                ", currentSpeed=" + getCurrentSpeed() +
+                ", currentPort=" + getCurrentPort() +
+                ", aidType=" + getAidType() +
+                ", suppliesOnBoard=" + getSuppliesOnBoard() +
+                ", hasHelipad=" + getHelipad() + " ]";
     }
 }

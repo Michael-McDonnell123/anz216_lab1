@@ -4,11 +4,16 @@ public class MobileClinicTruck  implements EmergencySupport{
     int doctorCount;
     boolean stockedMedicine;
 
-
+public MobileClinicTruck(String truckID, String region, int doctorCount, boolean stockedMedicine) {
+    this.truckID = truckID;
+    this.region = region;
+    this.doctorCount = doctorCount;
+    this.stockedMedicine = stockedMedicine;
+}
 
     @Override
     public void deployAid() {
-        System.out.println("Deploying Helicopter " + truckID);
+        System.out.println("Mobile clinic truck " + getTruckID() + " deploying " + getDoctorCount() + " doctors.");
     }
 
     @Override
@@ -20,18 +25,11 @@ public class MobileClinicTruck  implements EmergencySupport{
                 "Stocked Medicine: " + (getStockedMedicine() ? "Stocked with Medicine" : "Not Stocked with Medicine");
     }
 
-    public MobileClinicTruck(String truckID, String region, int doctorCount, boolean b) {
-        this.truckID = truckID;
-        this.region = region;
-        this.doctorCount = doctorCount;
-        this.stockedMedicine = b;
-    }
-
     public String getTruckID() {
         return truckID;
     }
 
-    public void setTruckID(String truckID) {
+    public void setTruckID() {
         this.truckID = truckID;
     }
 
@@ -61,10 +59,10 @@ public class MobileClinicTruck  implements EmergencySupport{
 
     @Override
     public String toString() {
-        return super.toString() +
-                getTruckID() +
-                getRegion() +
-                getDoctorCount() +
-                getStockedMedicine();
+        return "\nMobileClinicTruck [ truckId=" + getTruckID() +
+                ", region=" + getRegion() +
+                ", doctor count=" + getDoctorCount() +
+                ", Stocked medicine=" + getStockedMedicine() +
+                " ]";
     }
 }

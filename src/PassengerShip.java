@@ -5,8 +5,12 @@ public class PassengerShip extends Ship implements PassengerServices {
     int numberOfCabins;
     boolean entertainment;
 
-    public PassengerShip(String name, String registrationNumber, double tonnage, int crewSize, String currentPort) {
+    public PassengerShip(String name, String registrationNumber, double tonnage, int crewSize, String currentPort, int passengerCapacity, int passengerCount, int  numberOfCabins, boolean entertainment) {
         super(name, registrationNumber, tonnage, crewSize, currentPort);
+        this.passengerCapacity = passengerCapacity;
+        this.passengerCount = passengerCount;
+        this.numberOfCabins = numberOfCabins;
+        this.entertainment = entertainment;
     }
 
     @Override
@@ -16,7 +20,6 @@ public class PassengerShip extends Ship implements PassengerServices {
     }
 
     private void disembarkPassengers() {
-        System.out.println( getName() + " Passenger disembarking...");
         this.passengerCount = 0;
     }
 
@@ -28,9 +31,9 @@ public class PassengerShip extends Ship implements PassengerServices {
     @Override
     public void startEntertainment() {
         if (entertainment) {
-            System.out.println(getName() + " Entertainment");
+            System.out.println(getName() + " has entertainment");
         }else  {
-            System.out.println(getName() + " Not Entertainment");
+            System.out.println(getName() + " does not have entertainment");
         }
     }
 
@@ -66,10 +69,15 @@ public class PassengerShip extends Ship implements PassengerServices {
 
     @Override
     public String toString() {
-        return super.toString() +
-                getPassengerCapacity() +
-                getPassengerCount() +
-                getNumberOfCabins() +
-                getEntertainment();
+        return "Ship [name=" + getName() +
+                ", registrationNumber=" + getRegistrationNumber() +
+                ", tonnage=" + getTonnage() +
+                ", crewSize=" + getCrewSize() +
+                ", currentSpeed=" + getCurrentSpeed() +
+                ", currentPort=" + getCurrentPort() +
+                ", passengerCapacity=" + getPassengerCapacity() +
+                ", passengerCount=" + getPassengerCount() +
+                ", numberOfCabins=" + getNumberOfCabins() +
+                ", entertainment=" + getEntertainment() + " ]";
     }
 }
