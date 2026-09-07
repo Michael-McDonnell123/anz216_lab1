@@ -2,14 +2,26 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+// Create units
+        AidShip ship = new AidShip("Madleen", "AID-001", 8000, 120, "Melona",
+                "Medical", 200, true);
+        RescueHelicopter helicopter = new RescueHelicopter("ECHO-7", "Melona", 50,
+                true);
+        MobileClinicTruck truck = new MobileClinicTruck("TRK-12", "Melona", 5,
+                true);
+// Coordinate response
+        DisasterResponseCoordinator coordinator = new
+                DisasterResponseCoordinator();
+        coordinator.registerResponder(ship);
+        coordinator.registerResponder(helicopter);
+        coordinator.registerResponder(truck);
+// Print readiness reports
+        coordinator.printAllReadinessReports();
+        System.out.println();
+// Simulate deployment
+        coordinator.deployAll();
+        System.out.println();
+// Display the String representation of the coordinator
+        System.out.println(coordinator);
     }
 }

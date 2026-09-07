@@ -8,6 +8,13 @@ public class AidShip extends Ship implements EmergencySupport{
         super(name, registrationNumber, tonnage, crewSize, currentPort);
     }
 
+    public AidShip(String name, String registrationNumber, int tonnage, int crewSize, String currentPort, String medical, int i, boolean b) {
+        super(name, registrationNumber, tonnage, crewSize, currentPort);
+        this.addType = medical;
+        this.suppliesOnBoard = i;
+        this.hasHelipad = b;
+    }
+
     @Override
     public void dock(String port) {
         super.dock(port);
@@ -21,17 +28,22 @@ public class AidShip extends Ship implements EmergencySupport{
 
     @Override
     public void deployAid() {
-
+        System.out.println("Aid Ship " + getName() + " is deploying " + getSuppliesOnBoard() + " units of " + getAidType() + " aid.");
+        unloadSupplies();
     }
 
     @Override
     public String getEmergencyReadinessReport() {
-        return "";
+        return "Ship Emergency Report:\n" +
+                "Name: " + getName() + "\n" +
+                "Aid Type: " + getAidType() + "\n" +
+                "Supplies on Board: " + getSuppliesOnBoard() + "\n" +
+                "Helipad: " + (getHelipad() ? "Available" : "Not Available");
     }
 
     @Override
     public void navigateTo(String shipsDestination) {
-
+        System.out.println(getName() + " Ship Destination: " + shipsDestination);
     }
 
     public String getAidType() {
