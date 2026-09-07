@@ -4,10 +4,6 @@ public class AidShip extends Ship implements EmergencySupport{
     int suppliesOnBoard;
     boolean hasHelipad;
 
-    public AidShip(String name, String registrationNumber, double tonnage, int crewSize, String currentPort) {
-        super(name, registrationNumber, tonnage, crewSize, currentPort);
-    }
-
     public AidShip(String name, String registrationNumber, int tonnage, int crewSize, String currentPort, String medical, int i, boolean b) {
         super(name, registrationNumber, tonnage, crewSize, currentPort);
         this.addType = medical;

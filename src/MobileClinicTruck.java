@@ -13,7 +13,7 @@ public class MobileClinicTruck  implements EmergencySupport{
 
     @Override
     public String getEmergencyReadinessReport(){
-        return  "Helicopter Emergency Report:\n" +
+        return  "Truck Emergency Report:\n" +
                 "Truck ID: " + getTruckID() + "\n" +
                 "Region: " + getRegion() + "\n" +
                 "Doctor Count: " + getDoctorCount() + "\n" +

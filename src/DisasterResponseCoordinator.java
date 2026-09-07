@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class DisasterResponseCoordinator {
+
     ArrayList<EmergencySupport> responders;
 
     public DisasterResponseCoordinator(){
