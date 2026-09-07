@@ -88,11 +88,11 @@ public class RescueHelicopter implements EmergencySupport {
     @Override
     public String toString() {
         return "\nRescueHelicopter [callSign='" + getCallSign() + '\'' +
-                "', base location='" + getBaseLocation() + '\'' +
-                "', current speed=" + getCurrentSpeed() +
+                "', baseLocation='" + getBaseLocation() + '\'' +
+                "', currentSpeed=" + getCurrentSpeed() +
                 ", altitude=" + getAltitude() +
-                ", medical kits=" + getMedicalKit() +
-                ", has rescue hoist=" + getRescueHoist() + " ]";
+                ", medicalKits=" + getMedicalKit() +
+                ", hasRescueHoist=" + getRescueHoist() + " ]";
     }
 
 }
