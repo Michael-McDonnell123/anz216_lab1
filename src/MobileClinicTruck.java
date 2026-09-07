@@ -61,8 +61,8 @@ public MobileClinicTruck(String truckID, String region, int doctorCount, boolean
     public String toString() {
         return "\nMobileClinicTruck [ truckId=" + getTruckID() +
                 ", region=" + getRegion() +
-                ", doctor count=" + getDoctorCount() +
-                ", Stocked medicine=" + getStockedMedicine() +
+                ", doctorCount=" + getDoctorCount() +
+                ", StockedWithMedicine=" + getStockedMedicine() +
                 " ]";
     }
 }
