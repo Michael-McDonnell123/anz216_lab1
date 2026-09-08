@@ -25,20 +25,39 @@ public class PassengerShip extends Ship implements PassengerServices {
         this.entertainment = entertainment;
     }
 
+    /**
+     * a dock() methods that extends the behavior of the dock() method in the parent class by unloading the passengers
+     * @param port
+     */
+
     @Override
     public void dock(String port) {
         super.dock(port);
         disembarkPassengers();
     }
 
+    /**
+     * a private disembarkPassengers() method, which takes no parameters and does not return anything. The method updates the passenger count.
+     */
+
     private void disembarkPassengers() {
         this.passengerCount = 0;
     }
+
+    /**
+     * Override method from the extends Ship class that implements the Navigable Interface class
+     * @param shipsDestination representing the ships destination
+     * does not return anything
+     */
 
     @Override
     public void navigateTo(String shipsDestination) {
         System.out.println(getName() + " Navigating to " + shipsDestination);
     }
+
+    /**
+     * Override method from the implements of PassengerServices Interface method
+     */
 
     @Override
     public void startEntertainment() {
@@ -49,13 +68,13 @@ public class PassengerShip extends Ship implements PassengerServices {
         }
     }
 
-    /**
-     * getters and setters
-     */
-
     public String getPassengerManifest() {
         return getName() + " Passenger Manifest " + passengerCount;
     }
+
+    /**
+     * getters and setters
+     */
 
     public int getPassengerCapacity() {
         return passengerCapacity;
@@ -81,6 +100,11 @@ public class PassengerShip extends Ship implements PassengerServices {
     public void setEntertainment(boolean entertainment) {
         this.entertainment = entertainment;
     }
+
+    /**
+     * a toString() method to return all object information as a String
+     * @return String
+     */
 
     @Override
     public String toString() {

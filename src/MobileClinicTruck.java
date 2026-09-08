@@ -24,6 +24,10 @@ public class MobileClinicTruck  implements EmergencySupport{
         this.stockedMedicine = stockedMedicine;
     }
 
+    /**
+     * Override Methods from the implement of the EmergencySupport Interface
+     */
+
     @Override
     public void deployAid() {
         System.out.println("Mobile clinic truck " + getTruckID() + " deploying " + getDoctorCount() + " doctors.");
@@ -73,6 +77,11 @@ public class MobileClinicTruck  implements EmergencySupport{
     public void setSockedMedicine(boolean sockedMedicine) {
         this.stockedMedicine = sockedMedicine;
     }
+
+    /**
+     * a toString() method to return all object information as a String
+     * @return String
+     */
 
     @Override
     public String toString() {

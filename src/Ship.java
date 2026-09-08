@@ -29,8 +29,14 @@ public abstract class Ship implements Navigable {
         this.currentPort = currentPort;
     }
 
+    /**
+     * a dock() method, which takes a port as an attribute to update the current port, and updates the current speed
+     * @param port
+     */
+
     public void dock(String port) {
         this.currentPort = port;
+        this.currentSpeed = 0.0;
     }
 
     /**

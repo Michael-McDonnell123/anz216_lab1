@@ -37,6 +37,10 @@ public class RescueHelicopter implements EmergencySupport {
         this.rescueHoist = rescueHoist;
     }
 
+    /**
+     * Override Methods from the implement of the EmergencySupport Interface
+     */
+
     @Override
     public void deployAid() {
         System.out.println("Rescue helicopter " + getCallSign() + " deploying " + getMedicalKit() + " medical kits");
@@ -102,6 +106,11 @@ public class RescueHelicopter implements EmergencySupport {
     public void setRescueHoist(boolean rescueHoist) {
         this.rescueHoist = rescueHoist;
     }
+
+    /**
+     * a toString() method to return all object information as a String
+     * @return String
+     */
 
     @Override
     public String toString() {

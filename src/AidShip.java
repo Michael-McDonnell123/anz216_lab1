@@ -22,15 +22,28 @@ public class AidShip extends Ship implements EmergencySupport{
         this.hasHelipad = hasHelipad;
     }
 
+    /**
+     * a dock() methods that extends the behavior of the dock() method in the parent class by unloading the supplies
+     * @param port
+     */
+
     @Override
     public void dock(String port) {
         super.dock(port);
         unloadSupplies();
     }
 
+    /**
+     * a private unloadSupplies() method, which takes no parameters and does not return anything. The method updates the supplies on board.
+     */
+
     public void unloadSupplies(){
         this.suppliesOnBoard = 0;
     }
+
+    /**
+     * Override Methods from the implement of the EmergencySupport Interface
+     */
 
     @Override
     public void deployAid() {
@@ -47,10 +60,20 @@ public class AidShip extends Ship implements EmergencySupport{
                 "Helipad: " + (getHelipad() ? "Available" : "Not Available");
     }
 
+    /**
+     * Override method from the extends Ship class that implements the Navigable Interface class
+     * @param shipsDestination representing the ships destination
+     * does not return anything
+     */
+
     @Override
     public void navigateTo(String shipsDestination) {
         System.out.println(getName() + " Ship Destination: " + shipsDestination);
     }
+
+    /**
+     * Getters and setters
+     */
 
     public String getAidType() {
         return addType;
@@ -75,6 +98,11 @@ public class AidShip extends Ship implements EmergencySupport{
     public void setHelipad(boolean hasHelipad) {
         this.hasHelipad = hasHelipad;
     }
+
+    /**
+     * a toString() method to return all object information as a String
+     * @return String
+     */
 
     @Override
     public String toString(){
