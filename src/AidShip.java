@@ -1,8 +1,19 @@
 public class AidShip extends Ship implements EmergencySupport{
 
+    /**
+     * Attributes:
+     * String addType
+     * int suppliesOnBoard
+     * boolean hasHelipad
+     */
+
     String addType;
     int suppliesOnBoard;
     boolean hasHelipad;
+
+    /**
+     * a constructor that initializes all instance variables, and any other constructors as needed
+     */
 
     public AidShip(String name, String registrationNumber, int tonnage, int crewSize, String currentPort, String medical, int suppliesOnBoard, boolean hasHelipad) {
         super(name, registrationNumber, tonnage, crewSize, currentPort);

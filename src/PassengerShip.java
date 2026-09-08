@@ -1,9 +1,21 @@
 public class PassengerShip extends Ship implements PassengerServices {
 
+    /**
+     * Attributes:
+     * int passengerCapacity
+     * int passengerCount
+     * int numberOfCabins
+     * boolean entertainment
+     */
+
     int passengerCapacity;
     int passengerCount;
     int numberOfCabins;
     boolean entertainment;
+
+    /**
+     * a constructor that initializes all instance variables, and any other constructors as needed
+     */
 
     public PassengerShip(String name, String registrationNumber, double tonnage, int crewSize, String currentPort, int passengerCapacity, int passengerCount, int  numberOfCabins, boolean entertainment) {
         super(name, registrationNumber, tonnage, crewSize, currentPort);
@@ -37,7 +49,10 @@ public class PassengerShip extends Ship implements PassengerServices {
         }
     }
 
-    @Override
+    /**
+     * getters and setters
+     */
+
     public String getPassengerManifest() {
         return getName() + " Passenger Manifest " + passengerCount;
     }

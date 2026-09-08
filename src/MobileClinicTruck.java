@@ -1,15 +1,28 @@
 public class MobileClinicTruck  implements EmergencySupport{
+
+    /**
+     * Attributes:
+     * String truckID
+     * String region
+     * int doctorCount
+     * boolean stockedMedicine
+     */
+
     String truckID;
     String region;
     int doctorCount;
     boolean stockedMedicine;
 
-public MobileClinicTruck(String truckID, String region, int doctorCount, boolean stockedMedicine) {
-    this.truckID = truckID;
-    this.region = region;
-    this.doctorCount = doctorCount;
-    this.stockedMedicine = stockedMedicine;
-}
+    /**
+     * a constructor that initializes all instance variables, and any other constructors as needed
+     */
+
+    public MobileClinicTruck(String truckID, String region, int doctorCount, boolean stockedMedicine) {
+        this.truckID = truckID;
+        this.region = region;
+        this.doctorCount = doctorCount;
+        this.stockedMedicine = stockedMedicine;
+    }
 
     @Override
     public void deployAid() {
@@ -24,6 +37,10 @@ public MobileClinicTruck(String truckID, String region, int doctorCount, boolean
                 "Doctor Count: " + getDoctorCount() + "\n" +
                 "Stocked Medicine: " + (getStockedMedicine() ? "Stocked with Medicine" : "Not Stocked with Medicine");
     }
+
+    /**
+     * getters and setters
+     */
 
     public String getTruckID() {
         return truckID;

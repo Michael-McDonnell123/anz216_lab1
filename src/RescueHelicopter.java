@@ -1,11 +1,25 @@
 public class RescueHelicopter implements EmergencySupport {
 
+    /**
+     * Attributes:
+     * String callSign
+     * String baseLocation
+     * int medicalKit
+     * double altitude
+     * double currentSpeed
+     * boolean rescueHoist
+     */
+
     String callSign;
     String baseLocation;
     int medicalKit;
     double altitude;
     double currentSpeed;
     boolean rescueHoist;
+
+    /**
+     * a constructor that initializes all instance variables, and any other constructors as needed
+     */
 
     public RescueHelicopter(String callSign, String baseLocation, int medicalKit, double altitude, double currentSpeed, boolean rescueHoist) {
         this.callSign = callSign;
@@ -36,6 +50,10 @@ public class RescueHelicopter implements EmergencySupport {
                 "Medical Kits: " + getMedicalKit() + "\n" +
                 "Rescue Hoist: " + (getRescueHoist() ? "Available" : "Not Available");
     }
+
+    /**
+     * getters and setters
+     */
 
     public String getCallSign() {
         return callSign;

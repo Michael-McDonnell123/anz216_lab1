@@ -1,10 +1,25 @@
 public abstract class Ship implements Navigable {
+
+    /**
+     * Attributes:
+     * private String name
+     * private String registrationNumber
+     * private double tonnage
+     * private int crewSize
+     * private double currentSpeed
+     * private String currentPort
+     */
+
     private String name;
     private String registrationNumber;
     private double tonnage;
     private int crewSize;
     private double currentSpeed;
     private String currentPort;
+
+    /**
+     * a constructor that initializes all instance variables, and any other constructors as needed
+     */
 
     public Ship(String name, String registrationNumber, double tonnage, int crewSize, String currentPort) {
         this.name = name;
@@ -17,6 +32,10 @@ public abstract class Ship implements Navigable {
     public void dock(String port) {
         this.currentPort = port;
     }
+
+    /**
+     * getters and setters
+     */
 
     public String getName() {
         return name;
