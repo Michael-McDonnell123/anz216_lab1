@@ -1,7 +1,7 @@
 public class RescueHelicopter implements EmergencySupport {
 
     /**
-     * Attributes:
+     * private Attributes:
      * String callSign
      * String baseLocation
      * int medicalKit

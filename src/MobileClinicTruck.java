@@ -1,7 +1,7 @@
 public class MobileClinicTruck  implements EmergencySupport{
 
     /**
-     * Attributes:
+     * private Attributes:
      * String truckID
      * String region
      * int doctorCount

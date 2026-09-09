@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class DisasterResponseCoordinator {
 
     /**
-     * Attributes:
+     * private Attributes:
      * ArrayList<EmergencySupport> responders
      */
 

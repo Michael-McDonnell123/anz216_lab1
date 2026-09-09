@@ -1,7 +1,7 @@
 public class AidShip extends Ship implements EmergencySupport{
 
     /**
-     * Attributes:
+     * private Attributes:
      * String addType
      * int suppliesOnBoard
      * boolean hasHelipad

@@ -1,7 +1,7 @@
 public abstract class Ship implements Navigable {
 
     /**
-     * Attributes:
+     * private Attributes:
      * private String name
      * private String registrationNumber
      * private double tonnage

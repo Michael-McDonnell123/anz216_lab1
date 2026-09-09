@@ -1,7 +1,7 @@
 public class PassengerShip extends Ship implements PassengerServices {
 
     /**
-     * Attributes:
+     * private Attributes:
      * int passengerCapacity
      * int passengerCount
      * int numberOfCabins
