@@ -7,9 +7,9 @@ public class AidShip extends Ship implements EmergencySupport{
      * boolean hasHelipad
      */
 
-    String addType;
-    int suppliesOnBoard;
-    boolean hasHelipad;
+    private String addType;
+    private int suppliesOnBoard;
+    private boolean hasHelipad;
 
     /**
      * a constructor that initializes all instance variables, and any other constructors as needed
@@ -37,7 +37,7 @@ public class AidShip extends Ship implements EmergencySupport{
      * a private unloadSupplies() method, which takes no parameters and does not return anything. The method updates the supplies on board.
      */
 
-    public void unloadSupplies(){
+    private void unloadSupplies(){
         this.suppliesOnBoard = 0;
     }
 

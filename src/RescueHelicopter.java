@@ -10,12 +10,12 @@ public class RescueHelicopter implements EmergencySupport {
      * boolean rescueHoist
      */
 
-    String callSign;
-    String baseLocation;
-    int medicalKit;
-    double altitude;
-    double currentSpeed;
-    boolean rescueHoist;
+    private String callSign;
+    private String baseLocation;
+    private int medicalKit;
+    private double altitude;
+    private double currentSpeed;
+    private boolean rescueHoist;
 
     /**
      * a constructor that initializes all instance variables, and any other constructors as needed

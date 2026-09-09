@@ -8,10 +8,10 @@ public class MobileClinicTruck  implements EmergencySupport{
      * boolean stockedMedicine
      */
 
-    String truckID;
-    String region;
-    int doctorCount;
-    boolean stockedMedicine;
+    private String truckID;
+    private String region;
+    private int doctorCount;
+    private boolean stockedMedicine;
 
     /**
      * a constructor that initializes all instance variables, and any other constructors as needed

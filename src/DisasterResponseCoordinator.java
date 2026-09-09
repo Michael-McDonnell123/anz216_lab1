@@ -7,7 +7,7 @@ public class DisasterResponseCoordinator {
      * ArrayList<EmergencySupport> responders
      */
 
-    ArrayList<EmergencySupport> responders;
+    private ArrayList<EmergencySupport> responders;
 
     /**
      * a constructor that initializes all instance variables, and any other constructors as needed

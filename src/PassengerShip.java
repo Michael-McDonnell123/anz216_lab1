@@ -8,10 +8,10 @@ public class PassengerShip extends Ship implements PassengerServices {
      * boolean entertainment
      */
 
-    int passengerCapacity;
-    int passengerCount;
-    int numberOfCabins;
-    boolean entertainment;
+    private int passengerCapacity;
+    private int passengerCount;
+    private int numberOfCabins;
+    private boolean entertainment;
 
     /**
      * a constructor that initializes all instance variables, and any other constructors as needed
